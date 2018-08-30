@@ -1,0 +1,27 @@
+<app-menu></app-menu>
+<div class="content">
+  <h2>Wybierz zakres dat</h2>
+  <mat-form-field>
+    <input matInput [matDatepicker]="dateFrom" placeholder="urlop od"
+            readonly="readonly" (dateChange)="setTimeRange('start', $event)">
+    <mat-datepicker-toggle matSuffix [for]="dateFrom" ></mat-datepicker-toggle>
+    <mat-datepicker #dateFrom></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [matDatepicker]="dateTo" placeholder="urlop do"
+            readonly="readonly" (dateChange)="setTimeRange('stop', $event)">
+    <mat-datepicker-toggle matSuffix [for]="dateTo" ></mat-datepicker-toggle>
+    <mat-datepicker #dateTo></mat-datepicker>
+  </mat-form-field>
+  <h3>Liczba dni: {{numberOfDays}}  </h3>
+  <mat-checkbox color="primary" (change)="checkboxClientInfo = !checkboxClientInfo">Klient poinformowany</mat-checkbox>
+  <mat-checkbox color="primary" [checked]="checkboxPermission" (click)="$event.preventDefault()">Zgoda od
+    <mat-select placeholder="" (valueChange)="changeAccept($event)">
+      <mat-option *ngFor="let person of permissionFrom" [value]="person">
+        {{person}}
+      </mat-option>
+    </mat-select>
+  </mat-checkbox>
+  <button mat-stroked-button class="request-button" (click)="sendRequest()">Złóż wniosek</button>
+</div>

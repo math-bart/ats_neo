@@ -1,0 +1,155 @@
+<div fxLayout="row">
+  <div fxFlex="20" class="menu">
+    <app-menu></app-menu>
+  </div>
+  <div fxFlex="80">
+    <div class="content">
+      <div fxLayout="row">
+        <div fxLayout="column" fxFlex="40">
+          <mat-card class="numbers"><h2>Wykorzystano<span>7</span></h2></mat-card>
+          <mat-card class="numbers"><h2>Zatwierdzono<span>3</span></h2></mat-card>
+          <mat-card class="numbers"><h2>Pozostało<span class="days-left">16</span></h2></mat-card>
+        </div>
+        <div fxFlex="35" fxFlex.md="50">
+          <mat-card><mat-calendar></mat-calendar></mat-card>
+        </div>
+      </div>
+      <div fxLayout="row">
+        <mat-card fxFlex="100">
+          <mat-card-header>
+            <button (click)="showMore(0)" mat-raised-button class="showMore"> Show More</button>
+            <h2>Wnioski</h2>
+            <div class="add">
+                <button class="add-button cols-2 mat-mini-fab mat-accent" mat-mini-fab="">
+                  <span class="mat-button-wrapper">
+                    +
+                  </span>
+                  <div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></div>
+                  <div class="mat-button-focus-overlay"></div>
+                </button>
+            </div>
+          </mat-card-header>
+          <mat-card-content>
+            <div fxLayout="row" class="row header">
+              <div fxFlex="15">
+                Od:
+              </div>
+              <div fxFlex="15">
+                Do:
+              </div>
+              <div fxFlex="20">
+                Akceptuje:
+              </div>
+              <div fxFlex="13" fxLayoutAlign="center">
+                Liczba dni:
+              </div>
+              <div fxFlex="17" fxLayoutAlign="center">
+              </div>
+              <div fxFlex="20" fxLayoutAlign="center">
+              </div>
+            </div>
+            <div fxLayout="row" class="row table-content" *ngFor="let holiday of usedHolidays">
+              <div fxFlex="15" fxLayoutAlign="start center">
+                {{holiday.startDate}}
+              </div>
+              <div fxFlex="15" fxLayoutAlign="start center">
+                {{holiday.endDate}}
+              </div>
+              <div fxFlex="20" fxLayoutAlign="start center">
+                Łukasz Nowacki
+              </div>
+              <div fxFlex="13" fxLayoutAlign="center center">
+                10
+              </div>
+              <div fxFlex="10" fxLayoutAlign="center">
+                <a mat-raised-button class="trash-btn"><i class="far fa-trash-alt"></i></a>
+              </div>
+              <div fxFlex="17" fxLayoutAlign="center">
+                <a mat-raised-button routerLink="/accept">Edycja</a>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div fxLayout="row">
+        <mat-card fxFlex="100">
+          <mat-card-header>
+            <button (click)="showMore(1)" mat-raised-button class="showMore"> Show More</button>
+            <h2>Zatwierdzone</h2>
+          </mat-card-header>
+          <mat-card-content>
+            <div fxLayout="row" class="row header">
+              <div fxFlex="15">
+                Od:
+              </div>
+              <div fxFlex="15">
+                Do:
+              </div>
+              <div fxFlex="20">
+                Zaaprobował:
+              </div>
+              <div fxFlex="13" fxLayoutAlign="center">
+                Liczba dni:
+              </div>
+            </div>
+            <div fxLayout="row" class="row table-content" *ngFor="let holiday of usedHolidays">
+              <div fxFlex="15" fxLayoutAlign="start center">
+                {{holiday.startDate}}
+              </div>
+              <div fxFlex="15" fxLayoutAlign="start center">
+                {{holiday.endDate}}
+              </div>
+              <div fxFlex="20" fxLayoutAlign="start center">
+                Łukasz Nowacki
+              </div>
+              <div fxFlex="13" fxLayoutAlign="center center">
+                10
+              </div>
+              <div fxFlex="10" fxLayoutAlign="center">
+                <a mat-raised-button class="trash-btn"><i class="far fa-trash-alt"></i></a>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div fxLayout="row">
+        <mat-card fxFlex="100">
+          <mat-card-header>
+            <button (click)="showMore(2)" mat-raised-button class="showMore"> Show More</button>
+            <h2>Wykorzystane</h2>
+          </mat-card-header>
+          <mat-card-content>
+            <div fxLayout="row" class="row header">
+              <div fxFlex="15">
+                Od:
+              </div>
+              <div fxFlex="15">
+                Do:
+              </div>
+              <div fxFlex="20">
+                Zaaprobował:
+              </div>
+              <div fxFlex="13" fxLayoutAlign="center">
+                Liczba dni:
+              </div>
+            </div>
+            <div fxLayout="row" class="row table-content" *ngFor="let holiday of usedHolidays">
+              <div fxFlex="15">
+                {{holiday.startDate}}
+              </div>
+              <div fxFlex="15">
+                {{holiday.endDate}}
+              </div>
+              <div fxFlex="20">
+                Łukasz Nowacki
+              </div>
+              <div fxFlex="13" fxLayoutAlign="center">
+                10
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

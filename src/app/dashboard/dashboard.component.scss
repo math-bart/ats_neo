@@ -1,0 +1,22 @@
+@import '../../overrides';
+
+mat-card {
+  overflow: hidden;
+  text-align: right;
+}
+i {
+  margin-right: 30px;
+  color: rgba(231, 120, 24, 0.6);
+  font-size: 120px;
+  position: absolute;
+  transform: rotateZ(30deg);
+  left: -5px;
+  top: 10px;
+}
+.description {
+  font-size: 22px;
+  p {
+    padding: 5px;
+    color: $neoteric-blue;
+  }
+}

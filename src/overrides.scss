@@ -1,0 +1,38 @@
+$background: #f4f7f6;
+$container-background: #fff;
+$neoteric-blue: #0576b9;
+$neoteric-orange: #e77818;
+
+.mat-form-field {
+  margin: 10px 25px 10px 10px;
+}
+
+.mat-checkbox-label mat-select {
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+  padding-left: 10px;
+  margin-left: 20px;
+  background-color: $background;
+  width: 70%;
+}
+
+.mat-checkbox-layout {
+  margin: 25px 0 0 45px;
+}
+
+.mat-calendar {
+  /*background-color: $background;*/
+  .mat-calendar-body-selected {
+    background-color: $neoteric-blue;
+  }
+}
+
+.mat-checkbox-checked.mat-primary .mat-checkbox-background {
+  background-color: $neoteric-blue;
+}
+
+.mat-select-content, .mat-select-panel-done-animating {
+  background-color: $background;
+  font-size: 13px;
+}
+
+

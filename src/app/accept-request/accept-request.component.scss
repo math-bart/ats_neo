@@ -1,0 +1,42 @@
+mat-card {
+  padding: 0 0 20px;
+  mat-card-content {
+    max-height: 200px;
+    overflow: hidden;
+    transition: max-height .5s;
+  }
+  .big {
+    padding: 30px 40px 20px;
+    max-height: 1000px;
+    transition: max-height 2s;
+  }
+}
+
+button {
+  padding: 5px;
+  min-width: 0;
+  line-height: 0;
+  margin: 5px;
+}
+.showMore {
+  top: 8px;
+  margin-left: calc(100% - 240px);
+  position: absolute;
+  display: inline-block;
+  float: right;
+  padding: 15px;
+}
+
+.accept {
+  background-color: #4CAF50;
+}
+
+.refuse {
+  background-color: #F44336;
+}
+
+.mail {
+  color: #ebebf3;
+  background-color: white;
+  font-size: 24px;
+}

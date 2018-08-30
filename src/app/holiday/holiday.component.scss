@@ -1,0 +1,72 @@
+mat-card {
+  padding: 0;
+  span {
+    font-size: 80px;
+    display: inline-block;
+    float: right;
+    color: #ccc;
+    font-family: 'Courgette', cursive;
+  }
+  span.days-left {
+  /*  color: #c6ff99;*/
+    color: #eb8b32;
+  }
+}
+
+mat-card.numbers {
+  padding: 20px 40px 0;
+}
+
+.add {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 59vw;
+}
+.add-button {
+  background-color: #0576b9;
+  span {
+    font-size: 40px;
+    color: #fff;
+    line-height: 10px;
+  }
+}
+
+.menu {
+  background-color: #fff;
+}
+
+.table-content div {
+  margin-bottom: 10px;
+  a {
+    background-color: #f4f7f6;
+    line-height: 25px;
+  }
+  .trash-btn {
+    min-width: 30px;
+  }
+}
+
+.showMore {
+  top: 12px;
+  margin-left: calc(100% - 240px);
+  position: absolute;
+  display: inline-block;
+  float: right;
+  padding: 15px;
+  line-height: 0;
+}
+
+@media (max-width: 1200px) {
+  mat-card {
+    text-align: center;
+    span {
+      font-size: 50px;
+      display: block;
+      width: 100%;
+    }
+  }
+  .add {
+    left: 56vw;
+  }
+}

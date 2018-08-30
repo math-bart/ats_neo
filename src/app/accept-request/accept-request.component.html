@@ -1,0 +1,123 @@
+<div fxLayout="row">
+  <div fxFlex="20" class="menu">
+    <app-menu></app-menu>
+  </div>
+  <div fxFlex="80">
+    <div class="content">
+      <div fxLayout="row">
+        <mat-card fxFlex="100">
+          <mat-card-header>
+            <button (click)="showMore(0)" mat-raised-button class="showMore"> Show More</button>
+            <h2>Lista próśb o udzielenie urlopu</h2>
+          </mat-card-header>
+          <mat-card-content [ngClass]="{big: cards[0] === true}">
+            <div fxLayout="row" class="row header">
+              <div fxFlex="20">
+                Pracownik:
+              </div>
+              <div fxFlex="15">
+                Od:
+              </div>
+              <div fxFlex="15">
+                Do:
+              </div>
+              <div fxFlex="15" fxLayoutAlign="center">
+                Pozostało dni:
+              </div>
+              <div fxFlex="15" fxLayoutAlign="center">
+                Dodano:
+              </div>
+              <div fxFlex="15" fxLayoutAlign="center">
+               Decyzja:
+              </div>
+              <div fxFlex="5" fxLayoutAlign="center">
+
+              </div>
+            </div>
+            <div fxLayout="row" class="row" *ngFor="let holiday of requestedHolidays">
+              <div fxFlex="20" fxLayoutAlign="start center">
+                {{holiday.employee}}
+              </div>
+              <div fxFlex="15" fxLayoutAlign="start center">
+                {{holiday.startDate}}
+              </div>
+              <div fxFlex="15" fxLayoutAlign="start center">
+                {{holiday.endDate}}
+              </div>
+              <div fxFlex="15" fxLayoutAlign="center center">
+                {{holiday.days}}
+              </div>
+              <div fxFlex="15" fxLayoutAlign="center center">
+                2017-11-21
+              </div>
+              <div fxFlex="15" fxLayoutAlign="center center">
+                <button mat-flat-button class="accept"><i class="fas fa-check"></i></button>
+                <button mat-flat-button class="refuse"><i class="far fa-times-circle"></i></button>
+              </div>
+              <div fxFlex="5" fxLayoutAlign="center">
+                <button mat-flat-button class="mail"><i class="fas fa-envelope"></i></button>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div fxLayout="row">
+        <mat-card fxFlex="100">
+          <mat-card-header>
+            <h2>Prośby o anulowanie udzielonego urlopu</h2>
+            <button (click)="showMore(1)" mat-raised-button class="showMore"> Show More</button>
+          </mat-card-header>
+          <mat-card-content [ngClass]="{big: cards[1] === true}">
+            <div fxLayout="row" class="row header">
+              <div fxFlex="20">
+                Pracownik:
+              </div>
+              <div fxFlex="15">
+                Od:
+              </div>
+              <div fxFlex="15">
+                Do:
+              </div>
+              <div fxFlex="15" fxLayoutAlign="center">
+                Liczba dni:
+              </div>
+              <div fxFlex="15" fxLayoutAlign="center">
+                Dodano:
+              </div>
+              <div fxFlex="15" fxLayoutAlign="center">
+                Decyzja:
+              </div>
+              <div fxFlex="5" fxLayoutAlign="center">
+
+              </div>
+            </div>
+            <div fxLayout="row" class="row" *ngFor="let holiday of requestedHolidays">
+              <div fxFlex="20" fxLayoutAlign="start center">
+                {{holiday.employee}}
+              </div>
+              <div fxFlex="15" fxLayoutAlign="start center">
+                {{holiday.startDate}}
+              </div>
+              <div fxFlex="15" fxLayoutAlign="start center">
+                {{holiday.endDate}}
+              </div>
+              <div fxFlex="15" fxLayoutAlign="center center">
+                {{holiday.days}}
+              </div>
+              <div fxFlex="15" fxLayoutAlign="center center">
+                2017-11-21
+              </div>
+              <div fxFlex="15" fxLayoutAlign="center center">
+                <button mat-flat-button class="accept"><i class="fas fa-check"></i></button>
+                <button mat-flat-button class="refuse"><i class="far fa-times-circle"></i></button>
+              </div>
+              <div fxFlex="5" fxLayoutAlign="center">
+                <button mat-flat-button class="mail"><i class="fas fa-envelope"></i></button>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
